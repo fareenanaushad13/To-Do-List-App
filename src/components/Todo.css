@@ -1,0 +1,146 @@
+body {
+    background: linear-gradient(135deg, #87CEEB, #000000);
+    height: 100vh;
+}
+
+.todo-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 490px;
+    max-height: 600px; 
+    overflow-y: auto; 
+    scrollbar-width: none;
+   
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    background: rgb(252, 246, 246);
+    margin-top: 2px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.todo-text {
+    flex: 1;
+    min-width: 60%;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
+.done-btn {
+    background: #2ecc71 !important;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.done-btn:hover {
+    background: #27ae60 !important;
+}
+
+.done-btn:disabled {
+    background: #b0b0b0;
+    cursor: not-allowed;
+}
+
+.delete-btn {
+    background: #e74c3c !important;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background: #c0392b !important;
+}
+
+.completed span, .completed p {
+    text-decoration: line-through;
+    color: #373636;
+}
+
+
+input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #667eea;
+}
+
+button {
+    background: #007BFF !important;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+button:hover {
+    background: #0056b3 !important;
+}
+
+@media (max-width: 600px) {
+    
+    .todo-container {
+        width: 95%;
+        max-width: 600px;
+        padding: 15px;
+        min-height: 300px;
+        overflow-y: auto;
+    }
+
+    .todo-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    button {
+        margin-left: 0 !important; 
+    }
+    .actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .done-btn, .delete-btn {
+        width: 48%;
+    }
+}
